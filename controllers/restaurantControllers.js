@@ -1,10 +1,10 @@
-var Restaurant = require('../models/food')
+var Restaurant = require('../models/restaurant')
 
 module.exports = {
   createRestaurant: function(req,res){
     Restaurant.create({
       name: req.body.name,
-      order: req.body.order,
+      owner: req.body.owner,
       address: req.body.address,
       open_status: req.body.open_status
     }, function (err, data) {
