@@ -9,17 +9,17 @@ router.get('/', function(req, res, next) {
 });
 
 // routing books
-router.get('/api/food/:id', foodController.readItem)
-router.get('/api/foods', foodController.readItems)
-router.post('/api/food', foodController.createItem)
-router.put('/api/food/:id', foodController.updateItem)
-router.delete('/api/food/:id', foodController.deleteItem)
+router.get('/api/food/:id', foodController.readFood)
+router.get('/api/foods', foodController.readFoods)
+router.post('/api/food', foodController.createFood)
+router.put('/api/food/:id', foodController.updateFood)
+router.delete('/api/food/:id', foodController.deleteFood)
 
 // //routing customer
-router.get('/api/restaurant/:id', restaurantController.readCustomer)
-router.get('/api/restaurants', restaurantController.readCustomers)
-router.post('/api/restaurant', restaurantController.createCustomer)
-router.put('/api/restaurant/:id', restaurantController.updateCustomer)
-router.delete('/api/restaurant/:id', customerController.deleteCustomer)
+router.get('/api/restaurant/:id', restaurantController.readRestaurant)
+router.get('/api/restaurants', restaurantController.readRestaurants)
+router.post('/api/restaurant', restaurantController.createRestaurant)
+router.put('/api/restaurant/:id', restaurantController.updateRestaurant)
+router.delete('/api/restaurant/:id', restaurantController.deleteRestaurant)
 
 module.exports = router;
